@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joy Room</title>
+    <link rel="stylesheet" href="Joy.css">
+    <script src="Joy.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Jersey+10&family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Pixelify+Sans:wght@400..700&family=Silkscreen:wght@400;700&family=Space+Grotesk:wght@300..700&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    
+</head>
+
+<body>
+
+    <div class="scanlines"></div>
+    <svg xmlns="http://www.w3.org/2000/svg" style="display:none;">
+        <defs>
+            <filter id="pixelate">
+                <feFlood x="0" y="0" height="20" width="20" result="flood"/>
+                <feComposite in="SourceGraphic" in2="flood" operator="in" result="composite1"/>
+                <feTile in="composite1" result="tile"/>
+                <feComposite in="tile" in2="flood" operator="in"/>
+            </filter>
+        </defs>
+    </svg>
+
+
+    <button id="playButton" style="position: fixed; left: 10px; top: 10px; font-size: 24px; padding: 10px; color: white; background: none; border: none; font-family: 'Courier New', Courier, monospace;">▶</button>
+    <audio id="bgm" loop>
+        <source src="22 Remastered 2004.mp4" type="audio/mp4">
+    </audio>
+    
+    
+    
+
+    <div id="dialogue-box" class="dialogue-box hidden">
+        <div class="avatar" style="background-image: url('家具/ren.png');"></div>
+        <div class="dialogue-content">
+            <h4 class="character-name">[Unknown Voice]
+            </h4>
+            <p class="message"></p>
+        </div>
+        <div class="continue-icon">▼</div>
+    </div>
+
+
+    <div class="center-container">
+<div class="container">
+ <div class="floor">
+    </div>
+
+    
+
+    <img src="家具/lanmen.png" alt="窗户" class="furniture" id="window">
+    <img src="家具/qiqiu.png" alt="门" class="furniture" id="doorC">
+    <img src="家具/lamp.PNG" alt="灯" class="furniture" id="lamp">
+    <img src="家具/joyzhuo.png" alt="桌子" class="furniture" id="table">
+    <img src="家具/lan copy.png" alt="椅子" class="furniture" id="chairL">
+    <img src="家具/lan.png" alt="椅子" class="furniture" id="chairR">
+</div>
+
+<div class="button-container">
+    <button id="back-button">Back</button>
+    <button id="again-button">Repeat</button>
+</div>
+
+</div>
+
+
+</body>
+</html>
